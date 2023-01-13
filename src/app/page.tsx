@@ -7,12 +7,12 @@ export default function Home() {
   return (
     <main className={inter.className}>
       <Header />
-      <section className="pt-24">
+      <section>
         <div className="container">
-          <p>
+          <h1 className="text-3xl leading-relaxed">
             Snippetbase is a code base for developers and designers focused on
             simplicity, functionality, and unobtrusive design.
-          </p>
+          </h1>
         </div>
       </section>
     </main>
