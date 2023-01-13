@@ -6,7 +6,7 @@ const Header = () => (
     <div className="container">
       <div className="flex justify-between items-center">
         <div className="logo font-extrabold text-xl">
-          <Link href="/">
+          <Link aria-label="Snippetbase homepage" href="/">
             <svg
               width="164"
               height="27"
