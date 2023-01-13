@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Header = () => (
   <>
-    <header className="fixed w-full pt-8 pb-8 bg-white">
+    <header className="fixed w-full pt-8 pb-8">
       <div className="container">
         <div className="flex justify-between items-center">
           <div className="logo font-extrabold text-xl">
@@ -15,7 +15,13 @@ const Header = () => (
             />
           </div>
           <div className="flex">
-            <a>Want to contribute?</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/nenadmarinkovic/snippetbase"
+            >
+              Want to contribute?
+            </a>
           </div>
         </div>
       </div>
