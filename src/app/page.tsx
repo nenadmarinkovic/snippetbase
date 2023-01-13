@@ -9,8 +9,8 @@ export default function Home() {
       <Header />
       <section>
         <div className="container">
-          <h1 className="text-3xl leading-relaxed">
-            Snippetbase is a code base for developers and designers focused on
+          <h1 className="text-2xl leading-[1.75] mt-5">
+            Snippetbase is a codebase for developers and designers focused on
             simplicity, functionality, and unobtrusive design.
           </h1>
         </div>
