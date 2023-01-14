@@ -1,3 +1,4 @@
+import Category from "@/components/Category";
 import Header from "@/components/Header";
 import { Inter } from "@next/font/google";
 
@@ -13,6 +14,9 @@ export default function Home() {
             Snippetbase is a codebase for developers and designers focused on
             simplicity, functionality, and unobtrusive design.
           </h1>
+          <Category name="CSS"/>
+          <Category name="JavaScript"/>
+          <Category name="React"/>
         </div>
       </section>
     </main>

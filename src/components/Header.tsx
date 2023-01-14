@@ -31,12 +31,28 @@ const Header = () => (
         </div>
         <div>
           <a
-            className="text-sm"
+            className="text-sm ml-7"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/nenadmarinkovic/snippetbase"
           >
-            Want to contribute?
+            About
+          </a>
+          <a
+            className="text-sm ml-7"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/nenadmarinkovic/snippetbase"
+          >
+            Contribute
+          </a>
+          <a
+            className="text-sm ml-7"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/nenadmarinkovic/snippetbase"
+          >
+            Contact
           </a>
         </div>
       </div>
