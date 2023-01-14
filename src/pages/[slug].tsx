@@ -15,7 +15,7 @@ interface ParamProps {
   params: {
     slug: string;
   };
-};
+}
 
 interface CodeProps {
   source: any;
@@ -31,7 +31,10 @@ const CodePage: NextPage<CodeProps> = ({ frontMatter, source }) => {
     <>
       <Head>
         <title> {frontMatter.title} </title>
-        <meta name="description" content="Codebase for developers and designers." />
+        <meta
+          name="description"
+          content="Codebase for developers and designers."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
