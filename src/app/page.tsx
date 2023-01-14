@@ -14,6 +14,7 @@ export default function Home() {
             Snippetbase is a codebase for developers and designers focused on
             simplicity, functionality, and unobtrusive design.
           </h1>
+          <Category name="All"/>
           <Category name="CSS"/>
           <Category name="JavaScript"/>
           <Category name="React"/>
