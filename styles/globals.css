@@ -25,6 +25,11 @@ p {
   line-height: 1.8;
 }
 
+li,
+ol {
+  list-style: none;
+}
+
 .container {
   width: 100%;
   max-width: 860px;

@@ -6,6 +6,11 @@ import { NextPage } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { postFilePaths, CODE_PATH } from "../../utils/mdx-code";
+import About from "components/About";
+import Header from "components/Header";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const components = {
   Head,
@@ -30,7 +35,7 @@ const CodePage: NextPage<CodeProps> = ({ frontMatter, source }) => {
   return (
     <>
       <Head>
-        <title> {frontMatter.title} </title>
+        <title>{frontMatter.title}</title>
         <meta
           name="description"
           content="Codebase for developers and designers."
@@ -38,8 +43,20 @@ const CodePage: NextPage<CodeProps> = ({ frontMatter, source }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <MDXRemote {...source} components={components} />
+      <main className={inter.className}>
+        <Header />
+        <section>
+          <div className="container">
+            <About
+              text="Snippetbase is a codebase for developers and designers focused on
+    simplicity, functionality, and unobtrusive design."
+            />
+
+            <section>
+              <MDXRemote {...source} components={components} />
+            </section>
+          </div>
+        </section>
       </main>
     </>
   );
