@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import About from "components/About";
 import fs from "fs";
 import Head from "next/head";
@@ -12,27 +13,54 @@ import { postFilePaths, CODE_PATH } from "../utils/mdx-code";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ posts }: any) {
+  const [filteredPosts, setFilteredPosts] = useState(posts);
+  const [uniqueCategories, setUniqueCategories] = useState([]);
+
+  const filterCategory = (category: string) => {
+    const filteredPosts = posts.filter(
+      (post: any) => post.data.category === category
+    );
+
+    setFilteredPosts(filteredPosts);
+  };
+
+  const uniqueCategoriesOnLoad = (posts: any) => {
+    const categories = posts
+      .map((post: any) => post.data.category)
+      .filter((item: any, index: any, arr: any) => arr.indexOf(item) === index);
+
+    setUniqueCategories(categories);
+  };
+
+  const resetCategories = () => {
+    setFilteredPosts(posts);
+  };
+
+  useEffect(() => {
+    uniqueCategoriesOnLoad(posts);
+  }, [posts]);
+
   return (
     <>
       <Head>
         <title>Snippetbase</title>
       </Head>
-
       <main className={inter.className}>
         <Header />
         <section>
           <div className="container">
-            <About
-              text="Snippetbase is a codebase for developers and designers focused on
-    simplicity, functionality, and unobtrusive design."
-            />
-            <Category name="All" />
-            <Category name="CSS" />
-            <Category name="JavaScript" />
-            <Category name="React" />
+            <About text="Snippetbase is a codebase for developers and designers focused on simplicity, functionality, and unobtrusive design." />
+            <Category name="All" onClick={() => resetCategories()} />
+            {uniqueCategories.map((category: any, index: any) => (
+              <Category
+                name={category}
+                key={index}
+                onClick={() => filterCategory(category)}
+              />
+            ))}
             <div className="flex flex-col">
               <ul className="mt-3">
-                {posts.map((post: any) => (
+                {filteredPosts.map((post: any) => (
                   <li key={post.filePath}>
                     <Link
                       as={`/code/${post.filePath.replace(/\.mdx?$/, "")}`}
