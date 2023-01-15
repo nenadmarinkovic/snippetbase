@@ -38,8 +38,7 @@ const CodePage: NextPage<CodeProps> = ({ frontMatter, source }) => {
         <title>{frontMatter.title}</title>
         <meta
           name="description"
-          content="Codebase for developers and designers."
-        />
+          content="Codebase for developers and designers."/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -47,11 +46,7 @@ const CodePage: NextPage<CodeProps> = ({ frontMatter, source }) => {
         <Header />
         <section>
           <div className="container">
-            <About
-              text="Snippetbase is a codebase for developers and designers focused on
-    simplicity, functionality, and unobtrusive design."
-            />
-
+            <About text="Snippetbase is a codebase for developers and designers focused on simplicity, functionality, and unobtrusive design."/>
             <section>
               <MDXRemote {...source} components={components} />
             </section>
