@@ -31,15 +31,16 @@ export default function Home({ posts }: any) {
             <Category name="JavaScript" />
             <Category name="React" />
             <div className="flex flex-col">
-              <ul>
+              <ul className="mt-3">
                 {posts.map((post: any) => (
                   <li key={post.filePath}>
                     <Link
                       as={`/code/${post.filePath.replace(/\.mdx?$/, "")}`}
                       href={`/code/[slug]`}
                     >
-                      <h2>{post.data.title}</h2>
+                      <h2 className="mt-3 mb-3">{post.data.title}</h2>
                     </Link>
+                    <hr />
                   </li>
                 ))}
               </ul>
