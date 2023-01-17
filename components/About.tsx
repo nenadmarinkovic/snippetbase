@@ -5,7 +5,7 @@ interface AboutProps {
 }
 
 const About = ({ text }: AboutProps) => (
-  <h1 className="text-2xl leading-[1.75]">{text}</h1>
+  <h1 className="font-mono text-2xl leading-[1.75]">{text}</h1>
 );
 
 export default About;
