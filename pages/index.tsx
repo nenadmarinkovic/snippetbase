@@ -47,7 +47,7 @@ export default function Home({ posts }: any) {
       </Head>
       <main className={inter.className}>
         <Header />
-        <section>
+        <section className="mt-5 mb-5">
           <div className="container">
             <About text="Snippetbase is a codebase for developers and designers focused on simplicity, functionality, and unobtrusive design." />
             <Category name="All" onClick={() => resetCategories()} />
@@ -58,7 +58,7 @@ export default function Home({ posts }: any) {
                 onClick={() => filterCategory(category)}
               />
             ))}
-            <div className="flex flex-col">
+            <div className="flex flex-col mt-5">
               <ul className="mt-3">
                 {filteredPosts.map((post: any) => (
                   <li key={post.filePath}>

@@ -44,10 +44,10 @@ const CodePage: NextPage<CodeProps> = ({ frontMatter, source }) => {
 
       <main className={inter.className}>
         <Header />
-        <section>
+        <section className="mt-5 mb-5">
           <div className="container">
             <About text="Snippetbase is a codebase for developers and designers focused on simplicity, functionality, and unobtrusive design."/>
-            <section>
+            <section className="mt-5 overflow-auto">
               <MDXRemote {...source} components={components} />
             </section>
           </div>

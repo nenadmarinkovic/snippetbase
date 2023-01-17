@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const Header = () => (
-  <header className="sticky top-0 pt-5 pb-5 max-w-full border-b-[1px] border-[#eaeaea] b-wi bg-[#f8f8f8]">
+  <header className="sticky top-0 pt-5 pb-5 max-w-full border-b-[1px] border-[#eaeaea] bg-white">
     <div className="container">
       <div className="flex justify-between items-center">
         <div className="logo font-extrabold text-xl">
