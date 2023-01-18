@@ -9,6 +9,7 @@ import Category from "components/Category";
 import Header from "components/Header";
 import { Inter } from "@next/font/google";
 import { postFilePaths, CODE_PATH } from "../utils/mdx-code";
+import Footer from "components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,7 +48,7 @@ export default function Home({ posts }: any) {
       </Head>
       <main className={inter.className}>
         <Header />
-        <section className="mt-5 mb-5">
+        <section className="mt-5 mb-5 pb-48">
           <div className="container">
             <About text="Snippetbase is a codebase for developers and designers focused on simplicity, functionality, and unobtrusive design." />
             <Category name="All" onClick={() => resetCategories()} />
@@ -75,7 +76,9 @@ export default function Home({ posts }: any) {
             </div>
           </div>
         </section>
+      
       </main>
+      <Footer/>
     </>
   );
 }
