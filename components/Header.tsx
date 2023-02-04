@@ -28,7 +28,7 @@ const Header = () => (
             </svg>
           </Link>
         </div>
-        {/* <div>
+        <div>
           <a
             className="text-sm ml-10 text-white"
             target="_blank"
@@ -45,7 +45,7 @@ const Header = () => (
           >
             Contact
           </a>
-        </div> */}
+        </div>
       </div>
     </div>
   </header>
