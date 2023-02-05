@@ -46,9 +46,10 @@ export default function Home({ posts }: any) {
       <Head>
         <title>Snippetbase</title>
       </Head>
-      <main className={inter.className}>
+      
+      <main className={`h-screen ${inter.className}`}>
         <Header />
-        <section className="mt-5 mb-5 pb-48">
+        <section className="h-1pt-5 pb-48 bg-black">
           <div className="container">
             <About text="Snippetbase is a codebase for developers and designers focused on simplicity, functionality, and unobtrusive design." />
             <Category name="All" onClick={() => resetCategories()} />
@@ -67,7 +68,7 @@ export default function Home({ posts }: any) {
                       as={`/code/${post.filePath.replace(/\.mdx?$/, "")}`}
                       href={`/code/[slug]`}
                     >
-                      <h2 className="mt-3 mb-3">{post.data.title}</h2>
+                      <h2 className="text-white mt-3 mb-3">{post.data.title}</h2>
                     </Link>
                     <hr />
                   </li>
@@ -76,8 +77,9 @@ export default function Home({ posts }: any) {
             </div>
           </div>
         </section>
-      
       </main>
+   
+     
       <Footer/>
     </>
   );
