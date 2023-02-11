@@ -1,9 +1,7 @@
 import React from "react";
-import { Table } from "../styles/components/snippets";
+import { Table, TableElement } from "../styles/components/snippets";
 
 function Snippets({ posts }: any) {
-  console.log(posts);
-
   return (
     <div>
       <Table>
@@ -15,12 +13,12 @@ function Snippets({ posts }: any) {
             <th>Programming language</th>
           </tr>
           {posts.map((post: any, index: any) => (
-            <tr key={index}>
+            <TableElement key={index}>
               <td>{post.data.date}</td>
               <td>{post.data.title}</td>
               <td>{post.data.description}</td>
               <td>{post.data.category}</td>
-            </tr>
+            </TableElement>
           ))}
         </tbody>
       </Table>
