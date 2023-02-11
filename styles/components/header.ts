@@ -15,4 +15,6 @@ export const HeaderWrap = styled.header`
 
 export const HeaderLogo = styled.div``;
 
-export const HeaderInfo = styled.div``;
+export const HeaderInfo = styled.div`
+  color: #fff;
+`;
