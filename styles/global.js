@@ -20,44 +20,4 @@ export const GlobalStyle = createGlobalStyle`
       min-height: 100vh;
     }
 
-    input,
-    textarea,
-    button {
-      font-family: inherit;
-    }
-    
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    ul {
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      line-height: 1.8
-    }
-    
-    p {
-      line-height: 1.8;
-    }
-    
-    main {
-      overflow: hidden;
-    }
-
-    summary {
-      cursor: pointer;
-    }
-
-    section {
-      padding-top: 2.5rem;
-    }
-
-    code {
-      line-height: 1.5;
-      margin: 1.5rem 0;
-    }
 `;

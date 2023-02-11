@@ -1,6 +1,25 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+/**
+ * @type {import('next').NextConfig}
+ */
 
-module.exports = nextConfig
+module.exports = {
+  reactStrictMode: true,
+  swcMinify: true,
+
+  images: {
+    domains: ["i.scdn.co"],
+  },
+
+  compiler: {
+    styledComponents: true,
+  },
+
+  experimental: {
+    legacyBrowsers: false,
+  },
+
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
+}

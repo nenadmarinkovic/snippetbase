@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { Container } from "../styles/components/layout";
+import Header from "@/components/Header";
+import Snippets from "@/components/Snippets";
 
 export default function Home() {
   return (
@@ -14,9 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <main>Snippetbase</main>
+        <Header />
+        <Snippets />
       </Container>
-     
     </>
   );
 }
