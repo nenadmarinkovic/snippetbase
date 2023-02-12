@@ -23,7 +23,7 @@ function Snippets({ posts }: any) {
           15.05.2023
         </div>
         <div className="flex-row" role="cell">
-          Stonehenge, Windsor and Bath
+        Some random function
         </div>
         <div className="flex-row" role="cell">
           Let’s try to change the previous flexbox table to CSS grid layout!
