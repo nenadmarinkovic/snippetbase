@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Snippets({ posts }: any) {
   return (
@@ -14,24 +15,31 @@ function Snippets({ posts }: any) {
           Description
         </div>
         <div className="flex-row" role="columnheader">
-          Programming language
+          Category
         </div>
       </div>
-
-      <div className="flex-table row" role="rowgroup">
-        <div className="flex-row first" role="cell">
-          15.05.2023
-        </div>
-        <div className="flex-row" role="cell">
-        Some random function
-        </div>
-        <div className="flex-row" role="cell">
-          Let’s try to change the previous flexbox table to CSS grid layout!
-        </div>
-        <div className="flex-row" role="cell">
-          JavaScript
-        </div>
-      </div>
+      {posts.map((post: any, index: any) => (
+        <Link
+          key={index}
+          as={`/posts/${post.filePath.replace(/\.mdx?$/, "")}`}
+          href={`/posts/[slug]`}
+        >
+          <div className="flex-table row" role="rowgroup">
+            <div className="flex-row first" role="cell">
+              {post.data.date}
+            </div>
+            <div className="flex-row" role="cell">
+              {post.data.title}
+            </div>
+            <div className="flex-row" role="cell">
+              {post.data.description}
+            </div>
+            <div className="flex-row" role="cell">
+              {post.data.category}
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 }

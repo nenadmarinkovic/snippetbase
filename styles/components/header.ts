@@ -13,7 +13,7 @@ export const HeaderWrap = styled.header`
   align-items: center;
 `;
 
-export const HeaderLogo = styled.div``;
+export const HeaderLogo = styled.a``;
 
 export const HeaderInfo = styled.div`
   color: #fff;

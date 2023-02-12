@@ -67,7 +67,7 @@ export const GlobalStyle = createGlobalStyle`
       }
 
       &:nth-of-type(4) {
-        width: 17%;
+        width: 10%;
       }
     }
 

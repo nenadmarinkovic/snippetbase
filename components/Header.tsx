@@ -1,9 +1,6 @@
 import React from "react";
-import {
-  HeaderWrap,
-  HeaderLogo,
-  HeaderInfo,
-} from "../styles/components/header";
+import { HeaderWrap, HeaderInfo } from "../styles/components/header";
+import Link from "next/link";
 
 function Header() {
   const today = new Date();
@@ -27,7 +24,7 @@ function Header() {
 
   return (
     <HeaderWrap>
-      <HeaderLogo>
+      <Link href="/">
         <svg
           width="135"
           height="24"
@@ -47,7 +44,7 @@ function Header() {
             strokeLinejoin="round"
           />
         </svg>
-      </HeaderLogo>
+      </Link>
 
       <HeaderInfo>
         <span>{date}</span>

@@ -26,8 +26,9 @@ const PostPage: NextPage = ({ source, frontMatter }: any) => {
         <meta name="description" content="Web development and design." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+
       <Container>
+        <Header />
         <main>
           <MDXRemote {...source} components={components} />
         </main>
