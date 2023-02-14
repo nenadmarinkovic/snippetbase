@@ -19,7 +19,7 @@ function Header() {
   let date =
     weekday[today.getDay()] +
     " — " +
-    today.getDay() +
+    today.getDate() +
     "." +
     (today.getMonth() + 1) +
     "." +
