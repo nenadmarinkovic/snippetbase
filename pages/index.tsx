@@ -7,6 +7,8 @@ import { Container } from "../styles/components/layout";
 import { postFilePaths, POSTS_PATH } from "../utils/mdx-posts";
 import Header from "@/components/Header";
 import Snippets from "@/components/Snippets";
+import Footer from "@/components/Footer";
+import { MainWrap, Main } from "../styles/components/layout";
 
 const Home: NextPage = ({ posts }: any) => {
   return (
@@ -20,10 +22,15 @@ const Home: NextPage = ({ posts }: any) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
-        <Header />
-        <Snippets posts={posts} />
-      </Container>
+      <MainWrap>
+        <Main>
+          <Container>
+            <Header />
+            <Snippets posts={posts} />
+          </Container>
+        </Main>
+        <Footer />
+      </MainWrap>
     </>
   );
 };
