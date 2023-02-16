@@ -1,21 +1,48 @@
 import styled from "styled-components";
 
-export const Table = styled.div`
-display: table;
+export const TableContainer = styled.div`
+  display: block;
   width: 100%;
-  border-collapse: collapse;
+`;
 
-  span {
-    text-align: start;
+export const FlexTableHeader = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 0.5px solid rgb(60, 60, 60);
+  font-weight: bold;
+`;
+
+export const FlexTableRow = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 0.5px solid rgb(60, 60, 60);
+  transition: 0.3s;
+
+  :hover {
+    color: white;
   }
 `;
 
-export const TableElement = styled.div`
-  border-bottom: 0.5px solid #3c3c3c;
-  line-height: 3;
-`;
+export const FlexRow = styled.div`
+  width: calc(100% / 4);
+  text-align: start;
+  padding: 0.75rem 0.75rem 0.75rem 0;
 
-export const TableInfo = styled.div`
-  border-bottom: 0.5px solid #3c3c3c;
-  line-height: 3;
+  &:first-of-type {
+    width: 10%;
+  }
+
+  &:nth-of-type(2) {
+    width: 25%;
+  }
+
+  &:nth-of-type(3) {
+    width: 40%;
+  }
+
+  &:nth-of-type(4) {
+    width: 10%;
+  }
 `;
