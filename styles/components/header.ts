@@ -4,7 +4,7 @@ export const HeaderWrap = styled.header`
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 3rem 0;
+  padding: 1.5rem 0;
   backdrop-filter: saturate(70%) blur(3px);
   z-index: 2;
   contain: layout;

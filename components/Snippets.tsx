@@ -3,20 +3,12 @@ import Link from "next/link";
 
 function Snippets({ posts }: any) {
   return (
-    <div className="table-container" role="table" aria-label="Destinations">
-      <div className="flex-table header" role="rowgroup">
-        <div className="flex-row first" role="columnheader">
-          Date
-        </div>
-        <div className="flex-row" role="columnheader">
-          Name
-        </div>
-        <div className="flex-row" role="columnheader">
-          Description
-        </div>
-        <div className="flex-row" role="columnheader">
-          Category
-        </div>
+    <div className="table-container" aria-label="Destinations">
+      <div className="flex-table header">
+        <div className="flex-row">Date</div>
+        <div className="flex-row">Name</div>
+        <div className="flex-row">Description</div>
+        <div className="flex-row">Category</div>
       </div>
       {posts.map((post: any, index: any) => (
         <Link
@@ -24,19 +16,11 @@ function Snippets({ posts }: any) {
           as={`/posts/${post.filePath.replace(/\.mdx?$/, "")}`}
           href={`/posts/[slug]`}
         >
-          <div className="flex-table row" role="rowgroup">
-            <div className="flex-row first" role="cell">
-              {post.data.date}
-            </div>
-            <div className="flex-row" role="cell">
-              {post.data.title}
-            </div>
-            <div className="flex-row" role="cell">
-              {post.data.description}
-            </div>
-            <div className="flex-row" role="cell">
-              {post.data.category}
-            </div>
+          <div className="flex-table row">
+            <div className="flex-row">{post.data.date}</div>
+            <div className="flex-row">{post.data.title}</div>
+            <div className="flex-row">{post.data.description}</div>
+            <div className="flex-row">{post.data.category}</div>
           </div>
         </Link>
       ))}

@@ -22,7 +22,12 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
       color: inherit;
-      text-decoration: none
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    p {
+      line-height: 1.5;
     }
 
     .table-container {
