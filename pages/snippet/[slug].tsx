@@ -12,7 +12,15 @@ import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 import { MainWrap, Main } from "../../styles/components/layout";
 import Footer from "@/components/Footer";
-import { SlugContainer, SlugInfo, SlugMain } from "@/styles/pages/slug";
+import {
+  SlugContainer,
+  SlugInfo,
+  SlugMain,
+  SlugTitle,
+  SlugDate,
+  SlugDescription,
+  SlugCategory,
+} from "@/styles/pages/slug";
 
 const components = {
   Head,
@@ -33,10 +41,10 @@ const PostPage: NextPage = ({ source, frontMatter }: any) => {
           <Main>
             <SlugContainer>
               <SlugInfo>
-                <span>{frontMatter.title}</span>
-                <span>{frontMatter.date}</span>
-                <span>{frontMatter.description}</span>
-                <span>{frontMatter.category}</span>
+                <SlugTitle>{frontMatter.title}</SlugTitle>
+                <SlugDate>{frontMatter.date}</SlugDate>
+                <SlugDescription>{frontMatter.description}</SlugDescription>
+                <SlugCategory>{frontMatter.category}</SlugCategory>
               </SlugInfo>
               <SlugMain>
                 <MDXRemote {...source} components={components} />
