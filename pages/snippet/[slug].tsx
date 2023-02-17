@@ -7,10 +7,10 @@ import { NextPage } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { postFilePaths, SNIPPETS_PATH } from "../../utils/mdx-snippets";
-import { Container } from "../../styles/components/layout";
+import { Container, MainWrap, Main } from "../../styles/components/layout";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
-import { MainWrap, Main } from "../../styles/components/layout";
+
 import Footer from "@/components/Footer";
 import {
   SlugContainer,
