@@ -26,6 +26,11 @@ export const GlobalStyle = createGlobalStyle`
       line-height: 1.5;
     }
 
+    ::placeholder {
+      color: #fff;
+      opacity: 1;
+}
+
     p {
       line-height: 1.5;
     }

@@ -5,6 +5,7 @@ import {
   FlexTableHeader,
   FlexTableRow,
   FlexRow,
+  SearchInput,
 } from "../styles/components/snippets";
 import { useSearch } from "../hooks/useSearch";
 
@@ -13,9 +14,11 @@ function Snippets({ snippets }: any) {
 
   return (
     <TableContainer>
- 
-        <input onChange={handleSearchQuery} />
-      
+      <SearchInput
+        onChange={handleSearchQuery}
+        placeholder="Search..."
+        type="text"
+      />
 
       <FlexTableHeader>
         <FlexRow>Date</FlexRow>

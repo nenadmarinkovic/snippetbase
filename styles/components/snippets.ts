@@ -7,6 +7,7 @@ export const TableContainer = styled.div`
 `;
 
 export const FlexTableHeader = styled.div`
+  margin-top: 2rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -47,5 +48,20 @@ export const FlexRow = styled.div`
 
   &:nth-of-type(4) {
     width: 10%;
+  }
+`;
+
+export const SearchInput = styled.input`
+  padding: 1rem 0 1rem 0;
+  background: none;
+  border: none;
+  color: #fff;
+  border-bottom: 0.1px solid #262626;
+  width: 350px;
+  font-size: 1rem;
+  font-weight: bold;
+
+  :focus {
+    outline: 1px solid #000;
   }
 `;
