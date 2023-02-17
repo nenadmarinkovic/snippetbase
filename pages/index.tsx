@@ -24,8 +24,8 @@ const Home: NextPage = ({ snippets }: any) => {
       </Head>
       <MainWrap>
         <Main>
+          <Header />
           <Container>
-            <Header />
             <Snippets snippets={snippets} />
           </Container>
         </Main>
