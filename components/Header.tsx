@@ -32,7 +32,7 @@ function Header() {
     <HeaderWrap>
       <Container>
         <HeaderInside>
-          <Link href="/">
+          <Link href="/" aria-label="Homepage">
             <svg
               width="135"
               height="24"
