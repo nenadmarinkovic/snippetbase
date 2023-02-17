@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const TableContainer = styled.div`
   display: block;
   width: 100%;
+  margin-top: 3.5rem;
 `;
 
 export const FlexTableHeader = styled.div`
@@ -11,6 +12,7 @@ export const FlexTableHeader = styled.div`
   justify-content: space-between;
   border-bottom: 0.5px solid rgb(60, 60, 60);
   font-weight: bold;
+  color: #fff;
 `;
 
 export const FlexTableRow = styled.div`
@@ -19,9 +21,10 @@ export const FlexTableRow = styled.div`
   justify-content: space-between;
   border-bottom: 0.5px solid rgb(60, 60, 60);
   transition: 0.3s;
+  position: relative;
 
   :hover {
-    color: white;
+    color: #dcff50;
   }
 `;
 

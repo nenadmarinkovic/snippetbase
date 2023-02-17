@@ -30,6 +30,7 @@ const PostPage: NextPage = ({ source, frontMatter }: any) => {
       <Container>
         <Header />
         <main>
+          {frontMatter.title}
           <MDXRemote {...source} components={components} />
         </main>
       </Container>

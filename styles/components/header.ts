@@ -14,5 +14,7 @@ export const HeaderWrap = styled.header`
 `;
 
 export const HeaderInfo = styled.div`
-  color: #fff;
+  color: #DCFF50;
+  font-weight: bold;
+
 `;
