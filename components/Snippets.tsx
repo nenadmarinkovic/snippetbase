@@ -6,17 +6,24 @@ import {
   FlexTableRow,
   FlexRow,
 } from "../styles/components/snippets";
+import { useSearch } from "../hooks/useSearch";
 
 function Snippets({ snippets }: any) {
+  const { filteredSnippets, handleSearchQuery } = useSearch(snippets);
+
   return (
     <TableContainer>
+ 
+        <input onChange={handleSearchQuery} />
+      
+
       <FlexTableHeader>
         <FlexRow>Date</FlexRow>
         <FlexRow>Name</FlexRow>
         <FlexRow>Description</FlexRow>
         <FlexRow>Category</FlexRow>
       </FlexTableHeader>
-      {snippets.map((snippet: any, index: any) => (
+      {filteredSnippets.map((snippet: any, index: any) => (
         <Link
           key={index}
           as={`/snippet/${snippet.filePath.replace(/\.mdx?$/, "")}`}
