@@ -65,3 +65,7 @@ export const SearchInput = styled.input`
     outline: 1px solid #000;
   }
 `;
+
+export const NoResults = styled.p`
+  margin-top: 1rem;
+`;
