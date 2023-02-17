@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 import Header from "../../components/Header";
-import { useState } from "react";
 import { NextPage } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
@@ -11,14 +10,15 @@ import { postFilePaths, SNIPPETS_PATH } from "../../utils/mdx-snippets";
 import { Container } from "../../styles/components/layout";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
+import { MainWrap, Main } from "../../styles/components/layout";
+import Footer from "@/components/Footer";
+import { SlugContainer, SlugInfo, SlugMain } from "@/styles/pages/slug";
 
 const components = {
   Head,
 };
 
 const PostPage: NextPage = ({ source, frontMatter }: any) => {
-  const [openMenu, setOpenMenu] = useState(false);
-
   return (
     <>
       <Head>
@@ -29,10 +29,23 @@ const PostPage: NextPage = ({ source, frontMatter }: any) => {
 
       <Container>
         <Header />
-        <main>
-          {frontMatter.title}
-          <MDXRemote {...source} components={components} />
-        </main>
+        <MainWrap>
+          <Main>
+            <SlugContainer>
+              <SlugInfo>
+                <span>{frontMatter.title}</span>
+                <span>{frontMatter.date}</span>
+                <span>{frontMatter.description}</span>
+                <span>{frontMatter.category}</span>
+              </SlugInfo>
+              <SlugMain>
+                <MDXRemote {...source} components={components} />
+              </SlugMain>
+            </SlugContainer>
+          </Main>
+        </MainWrap>
+
+        <Footer />
       </Container>
     </>
   );
