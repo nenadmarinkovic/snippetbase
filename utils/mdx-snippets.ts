@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
-export const POSTS_PATH = path.join(process.cwd(), "posts");
+export const SNIPPETS_PATH = path.join(process.cwd(), "snippets");
 
 export const postFilePaths = fs
-  .readdirSync(POSTS_PATH)
+  .readdirSync(SNIPPETS_PATH)
   .filter((path) => /\.mdx?$/.test(path));

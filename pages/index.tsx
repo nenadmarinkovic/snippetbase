@@ -4,13 +4,13 @@ import matter from "gray-matter";
 import type { NextPage } from "next";
 import path from "path";
 import { Container } from "../styles/components/layout";
-import { postFilePaths, POSTS_PATH } from "../utils/mdx-posts";
+import { postFilePaths, SNIPPETS_PATH } from "../utils/mdx-snippets";
 import Header from "@/components/Header";
 import Snippets from "@/components/Snippets";
 import Footer from "@/components/Footer";
 import { MainWrap, Main } from "../styles/components/layout";
 
-const Home: NextPage = ({ posts }: any) => {
+const Home: NextPage = ({ snippets }: any) => {
   return (
     <>
       <Head>
@@ -26,7 +26,7 @@ const Home: NextPage = ({ posts }: any) => {
         <Main>
           <Container>
             <Header />
-            <Snippets posts={posts} />
+            <Snippets snippets={snippets} />
           </Container>
         </Main>
         <Footer />
@@ -36,8 +36,8 @@ const Home: NextPage = ({ posts }: any) => {
 };
 
 export async function getStaticProps() {
-  const posts = postFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
+  const snippets = postFilePaths.map((filePath) => {
+    const source = fs.readFileSync(path.join(SNIPPETS_PATH, filePath));
     const { content, data } = matter(source);
 
     return {
@@ -47,7 +47,7 @@ export async function getStaticProps() {
     };
   });
 
-  return { props: { posts }, revalidate: 10 };
+  return { props: { snippets }, revalidate: 10 };
 }
 
 export default Home;

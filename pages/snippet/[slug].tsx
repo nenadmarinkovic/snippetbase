@@ -7,7 +7,7 @@ import { useState } from "react";
 import { NextPage } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import { postFilePaths, POSTS_PATH } from "../../utils/mdx-posts";
+import { postFilePaths, SNIPPETS_PATH } from "../../utils/mdx-snippets";
 import { Container } from "../../styles/components/layout";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
@@ -39,8 +39,8 @@ const PostPage: NextPage = ({ source, frontMatter }: any) => {
 };
 
 export const getStaticProps = async ({ params }: any) => {
-  const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
-  const source = fs.readFileSync(postFilePath);
+  const snippetFilePath = path.join(SNIPPETS_PATH, `${params.slug}.mdx`);
+  const source = fs.readFileSync(snippetFilePath);
   const { content, data } = matter(source);
 
   const mdxSource = await serialize(content, {

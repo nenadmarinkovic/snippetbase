@@ -7,7 +7,7 @@ import {
   FlexRow,
 } from "../styles/components/snippets";
 
-function Snippets({ posts }: any) {
+function Snippets({ snippets }: any) {
   return (
     <TableContainer>
       <FlexTableHeader>
@@ -16,17 +16,17 @@ function Snippets({ posts }: any) {
         <FlexRow>Description</FlexRow>
         <FlexRow>Category</FlexRow>
       </FlexTableHeader>
-      {posts.map((post: any, index: any) => (
+      {snippets.map((snippet: any, index: any) => (
         <Link
           key={index}
-          as={`/posts/${post.filePath.replace(/\.mdx?$/, "")}`}
-          href={`/posts/[slug]`}
+          as={`/snippet/${snippet.filePath.replace(/\.mdx?$/, "")}`}
+          href={`/snippet/[slug]`}
         >
           <FlexTableRow>
-            <FlexRow>{post.data.date}</FlexRow>
-            <FlexRow>{post.data.title}</FlexRow>
-            <FlexRow>{post.data.description}</FlexRow>
-            <FlexRow>{post.data.category}</FlexRow>
+            <FlexRow>{snippet.data.date}</FlexRow>
+            <FlexRow>{snippet.data.title}</FlexRow>
+            <FlexRow>{snippet.data.description}</FlexRow>
+            <FlexRow>{snippet.data.category}</FlexRow>
           </FlexTableRow>
         </Link>
       ))}
