@@ -8,6 +8,7 @@ import { postFilePaths, SNIPPETS_PATH } from "../utils/mdx-snippets";
 import Header from "@/components/Header";
 import Snippets from "@/components/Snippets";
 import Footer from "@/components/Footer";
+import PaginatedItems from "@/components/PaginatedItems";
 
 const Home: NextPage = ({ snippets }: any) => {
   return (
@@ -25,7 +26,8 @@ const Home: NextPage = ({ snippets }: any) => {
         <Main>
           <Header />
           <Container>
-            <Snippets snippets={snippets} />
+            {/* <Snippets snippets={snippets} /> */}
+            <PaginatedItems itemsPerPage={10} snippets={snippets} />
           </Container>
         </Main>
         <Footer />

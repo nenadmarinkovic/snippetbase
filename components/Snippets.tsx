@@ -6,7 +6,7 @@ import {
   FlexTableRow,
   FlexRow,
   SearchInput,
-  NoResults,
+  NoResults
 } from "../styles/components/snippets";
 import { useSearch } from "../hooks/useSearch";
 
