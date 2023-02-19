@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const SlugContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  /* min-height: 100vh; */
 
   @media (max-width: 800px) {
     flex-direction: column;
@@ -28,6 +27,12 @@ export const SlugInfo = styled.div`
 export const SlugMain = styled.div`
   width: 55%;
   margin: 2.5rem 0 0 0;
+  color: #fff;
+
+  p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
 
   @media (max-width: 800px) {
     width: 100%;
@@ -42,6 +47,9 @@ export const SlugTitle = styled.h1`
 
 export const SlugDate = styled.div`
   margin-top: 0.3rem;
+  font-weight: bold;
+  color: white;
+  font-size: 0.75rem;
 `;
 
 export const SlugDescription = styled.p`

@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
     p {
-      line-height: 1.5;
+      line-height: 1.8;
     }
 
     ol, ul, li {
@@ -50,7 +50,7 @@ export const GlobalStyle = createGlobalStyle`
       padding: 1rem;
       border: 1px solid #262626;
       border-radius: 10px;
-      line-height: 1.5;
+      line-height: 1.8;
     }
 
     .hljs,
