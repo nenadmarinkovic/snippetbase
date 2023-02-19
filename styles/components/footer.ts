@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterWrap = styled.footer`
   color: #8d8d8d;
   padding: 1.5rem 0;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
 
   @media (max-width: 35rem) {
     margin-top: 0;
