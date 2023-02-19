@@ -16,7 +16,7 @@ function Snippets({ itemsPerPage, snippets }: any) {
   const { filteredSnippets, handleSearchQuery } = useSearch(snippets);
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = filteredSnippets.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(snippets.length / 10);
+  const pageCount = Math.ceil(snippets.length / itemsPerPage);
 
   const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % snippets.length;
