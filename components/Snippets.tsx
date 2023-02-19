@@ -45,6 +45,7 @@ function Snippets({ itemsPerPage, snippets }: any) {
       {currentItems.length > 0 ? (
         currentItems.map((snippet: any, index: any) => (
           <Link
+            className="snippet-item"
             key={index}
             as={`/snippet/${snippet.filePath.replace(/\.mdx?$/, "")}`}
             href={`/snippet/[slug]`}

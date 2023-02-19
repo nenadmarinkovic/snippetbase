@@ -350,7 +350,7 @@ export const GlobalStyle = createGlobalStyle`
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 3rem;
+      margin-top: 3.5rem;
       gap: 20px;
     }
 

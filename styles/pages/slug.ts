@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const SlugContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const SlugInfo = styled.div`
@@ -13,11 +17,20 @@ export const SlugInfo = styled.div`
   align-self: flex-start;
   top: 5.5rem;
   overflow-y: auto;
+
+  @media (max-width: 800px) {
+    position: unset;
+    width: 100%;
+  }
 `;
 
 export const SlugMain = styled.div`
   width: 55%;
   margin: 2.5rem 0 0 0;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const SlugTitle = styled.h1`

@@ -14,11 +14,25 @@ export const HeaderInside = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 350px) {
+    flex-direction: column;
+    align-items: start;
+  }
 `;
 
 export const HeaderInfo = styled.div`
   color: #dcff50;
   font-weight: bold;
+
+  span {
+    position: relative;
+    bottom: 3px;
+
+    @media (max-width: 350px) {
+      bottom: -3px;
+    }
+  }
 `;
 
 export const HeaderBorder = styled.div`
