@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const TableContainer = styled.div`
   display: block;
   width: 100%;
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
 `;
 
 export const FlexTableHeader = styled.div`
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;

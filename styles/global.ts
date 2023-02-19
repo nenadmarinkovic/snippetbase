@@ -41,6 +41,8 @@ export const GlobalStyle = createGlobalStyle`
       list-style: none;
     }
 
+    /* Code highlighter */
+
     .hljs {
       display: block;
       overflow-x: auto;
@@ -344,41 +346,26 @@ export const GlobalStyle = createGlobalStyle`
 
     /* Pagination */
 
-   
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      gap: 20px;
+    }
 
-.pagination {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 50px;
-	gap: 20px;
-}
+    .page-link {
+      cursor: pointer;
+      display: flex;
+      font-weight: 600;
+      font-size: 1rem;
+    }
 
-.page-link {
-  cursor: pointer;
-  display: flex;
-}
+    .pagination .page-number:hover {
+      background: #00a8ff;
+    }
 
-.pagination .page-number {
-	font-size: 1rem;
-	font-weight: 600;
-	background: #fff;
-	padding: 10px 20px;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: all 0.5s ease;
-}
-
-.pagination .page-number:hover {
-	background: #00a8ff;
-}
-
-.pagination .active {
-	color: #fff;
-}
-
-.pagination .active:hover {
-
-	background: #fff;
-}
+    .pagination .active {
+      color: #fff;
+    }
 `;
