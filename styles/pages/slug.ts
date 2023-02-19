@@ -10,7 +10,7 @@ export const SlugContainer = styled.div`
 `;
 
 export const SlugInfo = styled.div`
-  width: 30%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   position: sticky;
