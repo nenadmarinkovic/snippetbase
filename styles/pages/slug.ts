@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SlugContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  /* min-height: 100vh; */
 
   @media (max-width: 800px) {
     flex-direction: column;
