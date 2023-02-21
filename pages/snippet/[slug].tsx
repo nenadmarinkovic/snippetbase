@@ -51,9 +51,8 @@ const PostPage: NextPage = ({ source, frontMatter }: any) => {
               </SlugMain>
             </SlugContainer>
           </Main>
+          <Footer />
         </MainWrap>
-
-        <Footer />
       </Container>
     </>
   );

@@ -15,5 +15,5 @@ export const MainWrap = styled.div`
 
 export const Main = styled.main`
   flex: 1;
-  padding-bottom: 4.45rem;
+  padding-bottom: 9.6rem;
 `;
