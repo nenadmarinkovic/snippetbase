@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const MainWrap = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: 90vh;
 `;
 
 export const Main = styled.main`
