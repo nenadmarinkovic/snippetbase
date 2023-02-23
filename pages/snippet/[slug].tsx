@@ -7,7 +7,7 @@ import { NextPage } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { postFilePaths, SNIPPETS_PATH } from "../../utils/mdx-snippets";
-import { Container, MainWrap, Main } from "../../styles/components/layout";
+import { MainWrap, Main } from "../../styles/components/layout";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 
@@ -35,25 +35,23 @@ const PostPage: NextPage = ({ source, frontMatter }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <Container>
-        <MainWrap>
-          <Main>
-            <SlugContainer>
-              <SlugInfo>
-                <SlugTitle>{frontMatter.title}</SlugTitle>
-                <SlugDate>{frontMatter.date}</SlugDate>
-                <SlugDescription>{frontMatter.description}</SlugDescription>
-                <SlugCategory>{frontMatter.category}</SlugCategory>
-              </SlugInfo>
-              <SlugMain>
-                <MDXRemote {...source} components={components} />
-              </SlugMain>
-            </SlugContainer>
-          </Main>
-          <Footer />
-        </MainWrap>
-      </Container>
+      <MainWrap>
+        <Header />
+        <Main>
+          <SlugContainer>
+            <SlugInfo>
+              <SlugTitle>{frontMatter.title}</SlugTitle>
+              <SlugDate>{frontMatter.date}</SlugDate>
+              <SlugDescription>{frontMatter.description}</SlugDescription>
+              <SlugCategory>{frontMatter.category}</SlugCategory>
+            </SlugInfo>
+            <SlugMain>
+              <MDXRemote {...source} components={components} />
+            </SlugMain>
+          </SlugContainer>
+        </Main>
+        <Footer />
+      </MainWrap>
     </>
   );
 };

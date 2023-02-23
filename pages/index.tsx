@@ -3,7 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import type { NextPage } from "next";
 import path from "path";
-import { Container, MainWrap, Main } from "../styles/components/layout";
+import { MainWrap, Main } from "../styles/components/layout";
 import { postFilePaths, SNIPPETS_PATH } from "../utils/mdx-snippets";
 import Header from "@/components/Header";
 import Snippets from "@/components/Snippets";
@@ -22,11 +22,9 @@ const Home: NextPage = ({ snippets }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainWrap>
+        <Header />
         <Main>
-          <Header />
-          <Container>
-            <Snippets itemsPerPage={15} snippets={snippets} />
-          </Container>
+          <Snippets itemsPerPage={15} snippets={snippets} />
         </Main>
         <Footer />
       </MainWrap>

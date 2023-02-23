@@ -10,7 +10,7 @@ export const HeaderWrap = styled.header`
 `;
 
 export const HeaderInside = styled.div`
-  padding: 1.35rem 0;
+  padding: 1.35rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
