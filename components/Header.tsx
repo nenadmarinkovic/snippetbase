@@ -30,7 +30,7 @@ const Header = () => (
         </div>
         <div>
           <a
-            className="text-sm ml-10"
+            className="text-sm ml-10 text-white"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/nenadmarinkovic/snippetbase"
@@ -38,7 +38,7 @@ const Header = () => (
             Contribute
           </a>
           <a
-            className="text-sm ml-10"
+            className="text-sm ml-10 text-white"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/nenadmarinkovic/snippetbase"
