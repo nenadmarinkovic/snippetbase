@@ -55,7 +55,6 @@ function Header() {
           <span>{date}</span>
         </HeaderInfo>
       </HeaderInside>
-      <HeaderBorder />
     </HeaderWrap>
   );
 }

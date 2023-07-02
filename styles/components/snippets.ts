@@ -86,7 +86,7 @@ export const SearchInput = styled.input`
   background: none;
   border: none;
   color: #fff;
-  border-bottom: 0.1px solid #262626;
+  border-bottom: 0.5px solid rgb(60,60,60);
   width: 350px;
   font-size: 1rem;
   font-weight: bold;
