@@ -37,7 +37,6 @@ function Snippets({ itemsPerPage, snippets }: any) {
       />
 
       <FlexTableHeader>
-        <FlexRow>Date</FlexRow>
         <FlexRow>Name</FlexRow>
         <FlexRow>Description</FlexRow>
         <FlexRow>Category</FlexRow>
@@ -51,7 +50,6 @@ function Snippets({ itemsPerPage, snippets }: any) {
             href={`/snippet/[slug]`}
           >
             <FlexTableRow>
-              <FlexRow>{snippet.data.date}</FlexRow>
               <FlexRow>{snippet.data.title}</FlexRow>
               <FlexRow>{snippet.data.description}</FlexRow>
               <FlexRow>{snippet.data.category}</FlexRow>

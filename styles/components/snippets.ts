@@ -39,7 +39,7 @@ export const FlexTableRow = styled.div`
 `;
 
 export const FlexRow = styled.div`
-  width: calc(100% / 4);
+  width: calc(100% / 3);
   text-align: start;
   padding: 0.75rem 0.75rem 0.75rem 0;
 
@@ -49,35 +49,28 @@ export const FlexRow = styled.div`
   }
 
   &:first-of-type {
-    width: 10%;
+    width: 38%;
 
     @media (max-width: 800px) {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 
   &:nth-of-type(2) {
-    width: 25%;
+    width: 53%;
     @media (max-width: 800px) {
-    width: 100%;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
+      width: 100%;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
   }
 
   &:nth-of-type(3) {
-    width: 40%;
+    width: 7%;
     @media (max-width: 800px) {
-    width: 100%
-  }
-  }
-
-  &:nth-of-type(4) {
-    width: 10%;
-    @media (max-width: 800px) {
-    width: 100%
-  }
+      width: 100%;
+    }
   }
 `;
 
@@ -86,7 +79,7 @@ export const SearchInput = styled.input`
   background: none;
   border: none;
   color: #fff;
-  border-bottom: 0.5px solid rgb(60,60,60);
+  border-bottom: 0.5px solid rgb(60, 60, 60);
   width: 350px;
   font-size: 1rem;
   font-weight: bold;
