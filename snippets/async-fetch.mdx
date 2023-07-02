@@ -1,0 +1,36 @@
+---
+title: Async fetch
+date: 19.06.2023
+description: Fetch data asynchronously in a Vue component using the async and await keywords.
+category: vue
+---
+
+Fetch data asynchronously in a Vue component using the async and await keywords.
+
+```
+<template>
+  <div>
+    <ul>
+      <li v-for="item in items" :key="item.id">{{ item.name }}</li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      items: [],
+    };
+  },
+  async created() {
+    this.items = await fetchData();
+  },
+};
+
+async function fetchData() {
+  // Perform asynchronous data fetching
+  // Return the fetched data
+}
+</script>
+```

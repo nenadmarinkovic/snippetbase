@@ -1,0 +1,34 @@
+---
+title: Custom Hook
+date: 11.06.2023
+description: Create a custom hook to share logic between components.
+category: react
+
+---
+Create a custom hook to share logic between components.
+
+```javascript
+import { useState, useEffect } from 'react';
+
+const useCustomHook = (initialValue) => {
+  const [value, setValue] = useState(initialValue);
+
+  useEffect(() => {
+    // Perform side effects or subscriptions
+    return () => {
+      // Clean up side effects or subscriptions
+    };
+  }, []);
+
+  return [value, setValue];
+};
+
+const MyComponent = () => {
+  const [value, setValue] = useCustomHook('');
+
+  return (
+    <input value={value} onChange={(e) => setValue(e.target.value)} />
+  );
+};
+
+```

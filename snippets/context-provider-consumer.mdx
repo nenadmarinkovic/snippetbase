@@ -1,0 +1,30 @@
+---
+title: Context Provider and Consumer
+date: 02.07.2023
+description: Usage of React's Context API to share data between components without explicit prop passing.
+category: react
+
+---
+
+Usage of React's Context API to share data between components without explicit prop passing.
+
+```javascript
+const MyContext = React.createContext();
+
+const ParentComponent = () => {
+  return (
+    <MyContext.Provider value="Hello, Context!">
+      <ChildComponent />
+    </MyContext.Provider>
+  );
+};
+
+const ChildComponent = () => {
+  return (
+    <MyContext.Consumer>
+      {(value) => <div>{value}</div>}
+    </MyContext.Consumer>
+  );
+};
+
+```
