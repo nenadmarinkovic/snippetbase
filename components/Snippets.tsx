@@ -9,9 +9,12 @@ import {
   SearchInput,
   NoResults,
 } from "../styles/components/snippets";
+import { ItemType, SnippetType } from "../lib/types";
 import { useSearch } from "../hooks/useSearch";
 
-function Snippets({ itemsPerPage, snippets }: any) {
+type PropTypes = ItemType & SnippetType;
+
+function Snippets({ itemsPerPage, snippets }: PropTypes) {
   const [itemOffset, setItemOffset] = useState(0);
   const { filteredSnippets, handleSearchQuery } = useSearch(snippets);
   const endOffset = itemOffset + itemsPerPage;

@@ -10,7 +10,6 @@ import { postFilePaths, SNIPPETS_PATH } from "../../utils/mdx-snippets";
 import { MainWrap, Main } from "../../styles/components/layout";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
-
 import Footer from "@/components/Footer";
 import {
   SlugContainer,
@@ -21,12 +20,15 @@ import {
   SlugDescription,
   SlugCategory,
 } from "@/styles/pages/slug";
+import { FrontmatterType, SourceType } from "@/lib/types";
+
+type PropTypes = SourceType & FrontmatterType;
 
 const components = {
   Head,
 };
 
-const PostPage: NextPage = ({ source, frontMatter }: any) => {
+const PostPage: NextPage<PropTypes> = ({ source, frontMatter }: PropTypes) => {
   return (
     <>
       <Head>
@@ -46,7 +48,13 @@ const PostPage: NextPage = ({ source, frontMatter }: any) => {
               <SlugCategory>{frontMatter.category}</SlugCategory>
             </SlugInfo>
             <SlugMain>
-              <MDXRemote {...source} components={components} />
+              <MDXRemote
+                compiledSource={""}
+                scope={undefined}
+                frontmatter={undefined}
+                {...source}
+                components={components}
+              />
             </SlugMain>
           </SlugContainer>
         </Main>
