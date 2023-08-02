@@ -43,7 +43,6 @@ class Doc extends Document {
             name="description"
             content="Code snippets for developers and designers"
           />
-          <meta content="#fff" name="theme-color" />
           <link href="/favicon.ico" rel="shortcut icon" />
           <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
         </Head>

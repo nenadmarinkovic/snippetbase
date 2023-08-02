@@ -3,7 +3,6 @@ import {
   HeaderWrap,
   HeaderInside,
   HeaderInfo,
-  HeaderBorder,
 } from "../styles/components/header";
 import Link from "next/link";
 
